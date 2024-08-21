@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
+:root{
+    --shark-50: #f4f7f7;
+    --shark-100: #e3e8ea;
+    --shark-200: #cad5d7;
+    --shark-300: #a5b6bb;
+    --shark-400: #799097;
+    --shark-500: #5e757c;
+    --shark-600: #50636a;
+    --shark-700: #455359;
+    --shark-800: #3e484c;
+    --shark-900: #373e42;
+    --shark-950: #1e2326;
+    --fuente-principal:'Righteous';
+    --fuente-Secundaria:'Work Sans';
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans';
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+a{
+    text-decoration: none;
+}
+
+/* MENU */
+.contenedor-header{
+    background: linear-gradient(to bottom, var(--shark-950), var(--shark-900));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 130rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+.contenedor-header header .logo a{
+   font-family:var(--fuente-principal);
+   font-size: 3.6rem;
+   color: #29dbff;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header ul li a{
+   text-align: none;
+   font-family: var(--fuente-Secundaria);
+   color: var(--shark-100);
+   padding: 2rem;
+   font-size: 2rem;
+   transition: .5s;
+}
+.contenedor-header header ul li a:hover{
+    color:#91e7f8 ;
+}
+.menu{
+    background-color:#29dbff;
+    padding: .5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+}
+.menu .line{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+/*INICIO*/
+
+.inicio{
+    background:linear-gradient(to bottom, rgba(30,35,38,.5),rgba(30,35,38,1)),
+    url(imgs/mejores-desktops.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.inicio .contenido-banner{
+    background:linear-gradient(to bottom,var(--shark-950), var(--shark-800));
+    padding: 2rem;
+    max-width: 40rem;
+    border-radius: 2rem;
+    align-items: center;
+    margin: auto;
+}
+.inicio .contenido-banner img{
+    border: 1rem solid #29dbff;
+    margin: auto;
+    border-radius: 100%;
+    width: 80%;
+    display: block;
+}
+.inicio .contenido-banner .info{
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+.inicio .contenido-banner .info h1{
+    font-size: 4rem;
+    color: #fff;
+    font-family: var(--fuente-principal);
+}
+.inicio .contenido-banner .info h2{
+    font-family: var(--fuente-Secundaria);
+    color: #b9b9b9;
+}
+.inicio .contenido-banner .info .redes a{
+    gap: 1rem;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #fff;
+    border:1px solid #fff;
+    border-radius: 100%;
+    margin: 4rem 0.5rem;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    transition: .5s;
+}
+.inicio .contenido-banner .info .redes a:hover{
+    color: #29dbff;
+    border: 1px solid #29dbff;
+    background:var(--shark-950);
+}
+.inicio .contenedor-cv{
+    display: flex;
+}
+
+button{
+    background:#29dbff;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:5rem;
+    font-size:1.6rem;
+    padding:0 2rem;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin: auto;
+  }
+  button:hover{
+    background:var(--shark-950);
+    color:#29dbff;
+  }
+  button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #29dbff;
+    transition:500ms ease all;
+  }
+  button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+/*Skills*/
+
+.conocimientos{
+    background-color: var(--shark-950);
+    color:#fff;
+    padding: 5rem 2rem;
+}
+.conocimientos .titulo-conocimientos{
+    display: flex;
+    margin: auto;
+    max-width: 120rem;
+    font-family: var(--fuente-principal);
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+.conocimientos .contenido-seccion{
+    max-width: 120rem;
+    margin: auto;
+}
+
+.conocimientos .seccion-grid{
+    margin-top: 4rem;
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+}
+.conocimientos .seccion-grid .contenido-grid{
+    text-align: left;
+}
+.conocimientos .seccion-grid .contenido-grid h3{
+    font-size: 2rem;
+    font-family: var(--fuente-principal);
+    margin-bottom: 3rem;
+}
+.conocimientos .seccion-grid .contenido-grid span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.conocimientos .seccion-grid .contenido-grid .barra{
+    height: .8rem;
+    width: 80%;
+    background-color: var(--shark-500);
+    position: relative;
+    margin-bottom: 3rem;
+}
+.conocimientos .seccion-grid .contenido-grid .progreso{
+    background-color: #29dbff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .8rem;
+}
+.conocimientos .seccion-grid .contenido-grid .barra span{
+   position: absolute;
+   height: 4rem;
+   width: 4rem;
+   background-color: #29dbff;
+   border-radius: 5rem;
+   line-height: 4rem;
+   text-align: center;
+   top: -17px;
+   right: -15px;
+   font-size: 1.4rem;
+}
+
+.conocimientos .contenido-grid .html{
+    width: 0%;
+    animation: 2s html forwards;
+ }
+@keyframes html{
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+@media (max-width:1000px){
+    .nav-bar{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .contenedor-header header{
+        padding: 1.5rem 5rem;
+    }
+}
+
+@media (max-width:800px){
+    .inicio .contenido-banner{
+        margin-top: 9rem;
+        padding: 0;
+        max-width: 35rem;
+        height: 50rem;
+    }
+    .inicio .contenido-banner img{
+        margin: 1rem auto auto auto;
+        width: 60%;
+    }
+    
+}
