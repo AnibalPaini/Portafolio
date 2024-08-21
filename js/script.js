@@ -1,8 +1,5 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+menu=document.querySelector(".nav-menu");
+menu.addEventListener('click', function (){
+    navBar=document.querySelector(".nav-bar")
+    navBar.classList.toggle("activo");
+})
