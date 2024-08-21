@@ -53,11 +53,13 @@ a{
    font-size: 3.6rem;
    color: #29dbff;
 }
-.contenedor-header header ul{
+
+.contenedor-header header .nav-bar ul{
     display: flex;
     list-style: none;
 }
-.contenedor-header header ul li a{
+
+.contenedor-header header .nav-bar ul li a{
    text-align: none;
    font-family: var(--fuente-Secundaria);
    color: var(--shark-100);
@@ -65,29 +67,26 @@ a{
    font-size: 2rem;
    transition: .5s;
 }
+
 .contenedor-header header ul li a:hover{
     color:#91e7f8 ;
 }
-.menu{
+
+.nav-menu{
     background-color:#29dbff;
+    color: #fff;
     padding: .5rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-size: 2rem;
     display: none;
-}
-.menu .line{
-    width: 25px;
-    height: 3px;
-    background-color: black;
-    margin: 6px 0;
-    border-radius: 5px;
 }
 
 /*INICIO*/
 
 .inicio{
     background:linear-gradient(to bottom, rgba(30,35,38,.5),rgba(30,35,38,1)),
-    url(imgs/mejores-desktops.png);
+    url(../imgs/mejores-desktops.png);
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -203,18 +202,24 @@ button{
 .conocimientos .contenido-seccion{
     max-width: 120rem;
     margin: auto;
+    
 }
 
 .conocimientos .seccion-grid{
     margin-top: 4rem;
     max-width: 120rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2,1fr);
     gap: 3rem;
 
 }
+
 .conocimientos .seccion-grid .contenido-grid{
-    text-align: left;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 1rem;
+    
 }
 .conocimientos .seccion-grid .contenido-grid h3{
     font-size: 2rem;
@@ -227,12 +232,14 @@ button{
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
+
 .conocimientos .seccion-grid .contenido-grid .barra{
     height: .8rem;
-    width: 80%;
+    width: 100%;
     background-color: var(--shark-500);
     position: relative;
     margin-bottom: 3rem;
+    
 }
 .conocimientos .seccion-grid .contenido-grid .progreso{
     background-color: #29dbff;
@@ -246,45 +253,154 @@ button{
    height: 4rem;
    width: 4rem;
    background-color: #29dbff;
-   border-radius: 5rem;
+   border-radius: 50%;
    line-height: 4rem;
    text-align: center;
-   top: -17px;
-   right: -15px;
+   top: -1.7rem;
+   right: -1.5rem;
    font-size: 1.4rem;
 }
+
 
 .conocimientos .contenido-grid .html{
     width: 0%;
     animation: 2s html forwards;
- }
+}
+.conocimientos .contenido-grid .css{
+    width: 0%;
+    animation: 2s css forwards;
+}
+.conocimientos .contenido-grid .js{
+    width: 0%;
+    animation: 2s js forwards;
+}
+.conocimientos .contenido-grid .py{
+    width: 0%;
+    animation: 2s py forwards;
+}
+.conocimientos .contenido-grid .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+.conocimientos .contenido-grid .git{
+    width: 0%;
+    animation: 2s git forwards;
+}
 @keyframes html{
-    0%{width: 0%;}
-    100%{width: 75%;}
+    100%{width: 85%;}
+}
+@keyframes css{
+    100%{width: 70%;}
+}
+@keyframes js{
+    100%{width: 20%;}
+}
+@keyframes py{
+    100%{width: 30%;}
+}
+@keyframes java{
+    100%{width: 30%;}
+}
+@keyframes git{
+    100%{width: 50%;}
 }
 
-@media (max-width:1000px){
-    .nav-bar{
+.conocimientos .contenido-seccion .contenido-grid .img-conocimineto {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.conocimientos .contenido-seccion .contenido-grid .img-conocimineto img{
+    width: 6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Medias Queries*/
+
+@media (max-width:1150px){
+    .contenedor-header header .nav-bar{
+        position: absolute;
+        display: flex;
+        top: 7rem;
+        right: 0;
+        background: var(--shark-900);
+        padding: 2rem;
+        width: 30rem;
+        justify-content: center;
+        height: 100vh;
         display: none;
     }
-    .menu{
+
+    .contenedor-header header .nav-bar ul{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .contenedor-header header .nav-bar ul li{
+        margin-bottom: 4rem; 
+    }
+
+    .contenedor-header header .nav-menu{
         display: block;
     }
-    .contenedor-header header{
-        padding: 1.5rem 5rem;
+
+    .contenedor-header header .nav-bar.active{
+        display: block;
     }
 }
 
-@media (max-width:800px){
+@media (max-width:700px){
+    .conocimientos .seccion-grid{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:500px){
     .inicio .contenido-banner{
-        margin-top: 9rem;
-        padding: 0;
+        margin-top: 10rem;
         max-width: 35rem;
-        height: 50rem;
     }
-    .inicio .contenido-banner img{
-        margin: 1rem auto auto auto;
-        width: 60%;
+}
+
+@media (max-width:350px){
+    .inicio .contenido-banner{
+        margin-top: 10rem;
+        max-width: 30rem;
     }
-    
 }
