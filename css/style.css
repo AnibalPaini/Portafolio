@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 
+
 :root{
     --shark-50: #f4f7f7;
     --shark-100: #e3e8ea;
@@ -15,17 +16,17 @@
     --fuente-principal:'Righteous';
     --fuente-Secundaria:'Work Sans';
 
-}
 
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Work Sans';
-}
-html{
-    scroll-behavior: smooth;
-    font-size: 62.5%; /* 1 rem = 10px */
 }
 a{
     text-decoration: none;
@@ -142,7 +143,7 @@ a{
     border: 1px solid #29dbff;
     background:var(--shark-950);
 }
-.inicio .contenedor-cv{
+.inicio .contenedor-cv a{
     display: flex;
 }
 
@@ -191,7 +192,7 @@ button{
     color:#fff;
     padding: 5rem 2rem;
 }
-.conocimientos .titulo-conocimientos, .titulo--portafolio{
+.conocimientos .titulo-conocimientos, .titulo--portafolio, .titulo--sobremi{
     display: flex;
     margin: auto;
     max-width: 120rem;
@@ -347,10 +348,64 @@ button{
     max-width: 50rem;
 }
 
+/*Sobre mi*/
+.sobremi {
+    background-color: var(--shark-950);
+    color: var(--shark-100);
+    padding: 5rem 2rem;
+}
+
+.contenedor--sobremi {
+    max-width: 120rem;
+    margin: auto;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: var(--shark-900);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.contenedor--sobremi p {
+    margin-bottom: 2rem;
+}
 
 
+/*Contacto*/
+.contacto {
+    background-color: var(--shark-950);
+    color: var(--shark-100);
+    padding: 15rem 2rem;
+}
 
+.contacto h2 {
+    font-family: var(--fuente-principal);
+    font-size: 3rem;
+    color: #29dbff;
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
+.contenedor--contacto {
+    max-width: 120rem;
+    margin: auto;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.contenedor--contacto p {
+    margin-bottom: 1.5rem;
+}
+
+.contenedor--contacto a {
+    color: #29dbff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contenedor--contacto a:hover {
+    color: #91e7f8;
+}
 
 
 
@@ -454,6 +509,13 @@ button{
     }
     .portafolio .portafolio--grid .proyecto .proyecto--info p{
         max-width: 60rem;
+    }
+    .sobremi h2 {
+        font-size: 2.5rem;
+    }
+    
+    .contenedor--sobremi {
+        font-size: 1.4rem;
     }
 }
 @media (max-width:625px){
