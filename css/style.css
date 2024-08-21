@@ -186,12 +186,12 @@ button{
 
 /*Skills*/
 
-.conocimientos{
+.conocimientos, .portafolio{
     background-color: var(--shark-950);
     color:#fff;
     padding: 5rem 2rem;
 }
-.conocimientos .titulo-conocimientos{
+.conocimientos .titulo-conocimientos, .titulo--portafolio{
     display: flex;
     margin: auto;
     max-width: 120rem;
@@ -315,6 +315,39 @@ button{
     width: 6rem;
 }
 
+/*Portafolio*/
+.portafolio .portafolio--grid{
+    margin-top: 4rem;
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.portafolio .portafolio--grid .proyecto .proyecto--img{
+    width: 500px;
+    height: 250px;
+}
+.portafolio .portafolio--grid .proyecto .proyecto--titulo p{
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: var(--shark-200);
+}
+
+.portafolio .portafolio--grid .proyecto .proyecto--img img{
+    width: 100%;
+    height: 100%; 
+}
+
+.portafolio .portafolio--grid .proyecto .proyecto--info p{
+    font-size: 1.5rem;
+    color: var(--shark-50);
+    margin-top: 10px;
+    max-width: 50rem;
+}
+
+
 
 
 
@@ -382,12 +415,54 @@ button{
     .contenedor-header header .nav-bar.active{
         display: block;
     }
+
+    .portafolio .portafolio--grid .proyecto .proyecto--img{
+        width: 400px;
+        height: 200px;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--info p{
+        max-width: 40rem;
+    }
 }
 
-@media (max-width:700px){
+@media (max-width:850px){
+    .portafolio .portafolio--grid .proyecto .proyecto--img{
+        width: 350px;
+        height: 150px;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--info p{
+        max-width: 35rem;
+    }
+}
+
+@media (max-width:750px){
     .conocimientos .seccion-grid{
         display: flex;
         flex-direction: column;
+    }
+
+    .portafolio .portafolio--grid{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--img{
+        width: 60rem;
+        height: 40rem;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--info p{
+        max-width: 60rem;
+    }
+}
+@media (max-width:625px){
+    .portafolio .portafolio--grid .proyecto .proyecto--img{
+        width: 40rem;
+        height: 20rem;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--info p{
+        max-width: 40rem;
     }
 }
 
@@ -398,9 +473,27 @@ button{
     }
 }
 
+@media (max-width:450px){
+    .portafolio .portafolio--grid .proyecto .proyecto--img{
+        width: 35rem;
+        height: 20rem;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--info p{
+        max-width: 35rem;
+    }
+}
+
 @media (max-width:350px){
     .inicio .contenido-banner{
         margin-top: 10rem;
         max-width: 30rem;
+    }
+
+    .portafolio .portafolio--grid .proyecto .proyecto--img{
+        width: 25rem;
+        height: 15rem;
+    }
+    .portafolio .portafolio--grid .proyecto .proyecto--info p{
+        max-width: 25rem;
     }
 }
